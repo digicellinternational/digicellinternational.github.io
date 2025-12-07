@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digicell International - Telecommunications Solutions</title>
+    <title>Digicell International - Digital Content & Arts Representation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -15,13 +15,13 @@
         }
 
         :root {
-            --primary: #0056b3;
-            --primary-dark: #003d82;
-            --secondary: #00a8ff;
-            --accent: #ff6b00;
-            --dark: #333333;
-            --light: #f8f9fa;
-            --gray: #6c757d;
+            --primary: #1a365d;
+            --primary-dark: #0d2438;
+            --secondary: #e53e3e;
+            --accent: #d69e2e;
+            --dark: #2d3748;
+            --light: #f7fafc;
+            --gray: #718096;
             --white: #ffffff;
             --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             --transition: all 0.3s ease;
@@ -105,7 +105,7 @@
         }
 
         .btn-accent:hover {
-            background: #e05a00;
+            background: #b7791f;
         }
 
         .btn-outline {
@@ -146,21 +146,26 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            padding: 15px 0;
         }
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
+        .logo-container {
             display: flex;
             align-items: center;
         }
 
-        .logo i {
+        .logo-img {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
             margin-right: 10px;
-            color: var(--secondary);
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
         }
 
         .nav-links {
@@ -180,18 +185,19 @@
         }
 
         .nav-links a:hover {
-            color: var(--primary);
+            color: var(--secondary);
         }
 
         .mobile-toggle {
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
+            color: var(--primary);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 86, 179, 0.9), rgba(0, 61, 130, 0.9)), url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(26, 54, 93, 0.9), rgba(13, 36, 56, 0.9)), url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             color: var(--white);
@@ -269,45 +275,67 @@
             display: block;
         }
 
-        /* Partners Section */
-        .partners {
+        /* Clients Section */
+        .clients {
             background: var(--light);
         }
 
-        .partners-grid {
+        .clients-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
 
-        .partner-logo {
+        .client-card {
             background: var(--white);
-            padding: 30px;
+            padding: 40px 30px;
             border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 120px;
             box-shadow: var(--shadow);
             transition: var(--transition);
         }
 
-        .partner-logo:hover {
+        .client-card:hover {
             transform: translateY(-5px);
         }
 
-        .partner-logo img {
-            max-width: 100%;
-            max-height: 60px;
-            filter: grayscale(100%);
-            opacity: 0.7;
-            transition: var(--transition);
+        .client-quote {
+            font-style: italic;
+            color: var(--gray);
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 20px;
+            border-left: 3px solid var(--accent);
         }
 
-        .partner-logo:hover img {
-            filter: grayscale(0%);
-            opacity: 1;
+        .client-info {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .client-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        .client-name {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .client-role {
+            color: var(--gray);
+            font-size: 0.9rem;
         }
 
         /* Contact Section */
@@ -370,17 +398,25 @@
             margin-bottom: 40px;
         }
 
+        .footer-logo-container {
+            display: flex;
+            flex-direction: column;
+        }
+
         .footer-logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--white);
             margin-bottom: 20px;
-            display: block;
+        }
+
+        .footer-logo-img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
         }
 
         .footer-links h4 {
             color: var(--white);
             margin-bottom: 20px;
+            font-size: 1.2rem;
         }
 
         .footer-links ul {
@@ -398,7 +434,7 @@
         }
 
         .footer-links a:hover {
-            color: var(--secondary);
+            color: var(--accent);
             padding-left: 5px;
         }
 
@@ -421,7 +457,7 @@
         }
 
         .social-icons a:hover {
-            background: var(--primary);
+            background: var(--secondary);
             transform: translateY(-3px);
         }
 
@@ -430,6 +466,25 @@
             padding-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Shop Badge */
+        .shop-badge {
+            background: var(--accent);
+            color: var(--white);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-left: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
 
         /* Responsive Design */
@@ -483,6 +538,10 @@
             .hero h1 {
                 font-size: 2.2rem;
             }
+            
+            .logo-img {
+                height: 35px;
+            }
         }
 
         @media (max-width: 576px) {
@@ -494,8 +553,14 @@
                 padding: 150px 0 80px;
             }
             
-            .service-card {
+            .service-card, .client-card {
                 padding: 30px 20px;
+            }
+            
+            .shop-badge {
+                margin-left: 0;
+                margin-top: 10px;
+                display: block;
             }
         }
     </style>
@@ -505,10 +570,10 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">
-                    <i class="fas fa-satellite-dish"></i>
-                    Digicell International
-                </a>
+                <div class="logo-container">
+                    <img src="https://raw.githubusercontent.com/digicellinternational/digicellinternational.github.io/main/digicells-logo.png" alt="Digicell International Logo" class="logo-img">
+                    <a href="#" class="logo-text">Digicell International</a>
+                </div>
                 
                 <div class="mobile-toggle" id="mobileToggle">
                     <i class="fas fa-bars"></i>
@@ -518,8 +583,10 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#partners">Partners</a></li>
+                    <li><a href="#clients">Our Clients</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://shinisa.com/shop" target="_blank">Shop <span class="shop-badge">New!</span></a></li>
+                    <li><a href="https://digicellinternational.shinisa.com" target="_blank">Main Website</a></li>
                 </ul>
             </nav>
         </div>
@@ -528,11 +595,11 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <h1>Connecting The World Through Advanced Telecommunications</h1>
-            <p>Digicell International provides cutting-edge telecommunications solutions, networking infrastructure, and technology services to businesses and communities worldwide. We bridge the digital divide with innovative and reliable connectivity.</p>
+            <h1>Digitalizing Arts & Culture Through Technology</h1>
+            <p>We create digital content that represents arts and culture using cutting-edge technologies, bridging the gap between traditional heritage and modern digital platforms while preserving low-resource languages for global accessibility.</p>
             <div class="hero-buttons">
                 <a href="#services" class="btn">Our Services</a>
-                <a href="#contact" class="btn btn-outline">Contact Us</a>
+                <a href="#contact" class="btn btn-outline">Start Your Project</a>
             </div>
         </div>
     </section>
@@ -541,57 +608,57 @@
     <section class="services" id="services">
         <div class="container">
             <div class="text-center">
-                <h2>Our Services</h2>
-                <p>Comprehensive telecommunications solutions tailored to your business needs</p>
+                <h2>Our Digital Services</h2>
+                <p>Comprehensive digital solutions for arts, culture, and brand representation</p>
             </div>
             
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-wifi"></i>
+                        <i class="fas fa-palette"></i>
                     </div>
-                    <h3>Wireless Solutions</h3>
-                    <p>Advanced wireless networking solutions including WiFi deployment, point-to-point links, and last-mile connectivity for urban and rural areas.</p>
+                    <h3>Digital Arts Representation</h3>
+                    <p>Transforming traditional arts into digital formats using modern technologies while preserving cultural authenticity and heritage values.</p>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-satellite"></i>
+                        <i class="fas fa-language"></i>
                     </div>
-                    <h3>Satellite Communications</h3>
-                    <p>Reliable satellite connectivity for remote locations, maritime, aviation, and enterprise applications with global coverage.</p>
+                    <h3>Language Digitalization</h3>
+                    <p>Digitizing low-resource languages to help communities access global knowledge while preserving linguistic diversity and cultural identity.</p>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-network-wired"></i>
+                        <i class="fas fa-code"></i>
                     </div>
-                    <h3>Network Infrastructure</h3>
-                    <p>End-to-end network design, implementation, and maintenance including fiber optics, LAN/WAN, and data center solutions.</p>
+                    <h3>Website Development</h3>
+                    <p>Creating beautiful, responsive websites for artists, cultural organizations, and businesses seeking to establish a unique digital presence.</p>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
+                        <i class="fas fa-trademark"></i>
                     </div>
-                    <h3>Cybersecurity</h3>
-                    <p>Comprehensive network security solutions, threat monitoring, and data protection services for secure communications.</p>
+                    <h3>Brand Building</h3>
+                    <p>Developing distinctive brand identities for cultural projects, artists, and organizations with a focus on authenticity and digital appeal.</p>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-cloud"></i>
+                        <i class="fas fa-video"></i>
                     </div>
-                    <h3>Cloud Services</h3>
-                    <p>Cloud migration, management, and hybrid cloud solutions to optimize business operations and scalability.</p>
+                    <h3>Digital Content Creation</h3>
+                    <p>Producing engaging digital content including videos, animations, and interactive media that showcase cultural heritage and artistic expressions.</p>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-headset"></i>
+                        <i class="fas fa-hands-helping"></i>
                     </div>
-                    <h3>24/7 Support</h3>
-                    <p>Round-the-clock technical support, maintenance, and monitoring services to ensure uninterrupted connectivity.</p>
+                    <h3>Cultural Consulting</h3>
+                    <p>Expert guidance on digital transformation for cultural preservation, community engagement, and sustainable heritage representation.</p>
                 </div>
             </div>
         </div>
@@ -603,21 +670,24 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>About Digicell International</h2>
-                    <p>Digicell International is a leading provider of telecommunications and networking solutions with a global footprint. We specialize in delivering reliable, high-speed connectivity and innovative technology services to businesses, governments, and communities.</p>
+                    <p>We are digital content creators specializing in arts and culture representation through cutting-edge technologies. Our mission is to bridge the digital divide for underrepresented communities by digitalizing low-resource languages and making world knowledge accessible to all.</p>
                     
-                    <p>With over 15 years of experience in the industry, our team of certified engineers and technology experts is dedicated to bridging the digital divide and empowering organizations through cutting-edge communication technologies.</p>
+                    <p>Based in Islamabad, Pakistan, we build brands and create beautiful websites for clients who need expert guidance to develop something truly special. We combine technical expertise with cultural sensitivity to deliver digital solutions that respect heritage while embracing innovation.</p>
                     
-                    <p>Our mission is to provide seamless connectivity solutions that drive growth, enhance productivity, and enable digital transformation across all sectors.</p>
+                    <p>Our team of multilingual experts, cultural specialists, and digital artists work passionately to preserve linguistic diversity and cultural heritage through sustainable digital transformation. We believe technology should serve humanity's cultural richness, not replace it.</p>
                     
-                    <a href="#contact" class="btn btn-accent" style="margin-top: 20px;">Get In Touch</a>
+                    <p>With a global perspective and local understanding, we serve clients worldwide from our base in Islamabad, bringing the same dedication and creativity to every project, whether it's for a local artist or an international cultural institution.</p>
+                    
+                    <a href="#contact" class="btn btn-accent" style="margin-top: 20px;">Collaborate With Us</a>
                 </div>
                 
                 <div class="about-image">
                     <!-- Placeholder for about image -->
                     <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); height: 100%; min-height: 400px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
                         <div style="text-align: center; padding: 20px;">
-                            <i class="fas fa-globe-americas" style="font-size: 4rem; margin-bottom: 20px;"></i>
-                            <p>Global Telecommunications Solutions</p>
+                            <i class="fas fa-globe-asia" style="font-size: 4rem; margin-bottom: 20px;"></i>
+                            <p>Digital Cultural Heritage Preservation</p>
+                            <p style="font-size: 1rem; margin-top: 10px;">Based in Islamabad, Serving Worldwide</p>
                         </div>
                     </div>
                 </div>
@@ -625,33 +695,52 @@
         </div>
     </section>
 
-    <!-- Partners Section -->
-    <section class="partners" id="partners">
+    <!-- Clients Section -->
+    <section class="clients" id="clients">
         <div class="container">
             <div class="text-center">
-                <h2>Our Technology Partners</h2>
-                <p>Collaborating with industry leaders to deliver exceptional solutions</p>
+                <h2>What Our Clients Say</h2>
+                <p>Testimonials from cultural organizations, artists, and institutions we've worked with</p>
             </div>
             
-            <div class="partners-grid">
-                <div class="partner-logo">
-                    <!-- Placeholder for partner logo -->
-                    <div style="font-weight: bold; color: var(--primary);">CISCO</div>
+            <div class="clients-grid">
+                <div class="client-card">
+                    <div class="client-quote">
+                        "The digitalization of our indigenous language materials has transformed how our community accesses education. Digicell International's team showed remarkable sensitivity to cultural nuances while implementing cutting-edge technology."
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar" style="background: #4a5568;">CIC</div>
+                        <div>
+                            <div class="client-name">Cultural Heritage Institute</div>
+                            <div class="client-role">Language Preservation Project</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="partner-logo">
-                    <div style="font-weight: bold; color: var(--primary);">HUAWEI</div>
+                
+                <div class="client-card">
+                    <div class="client-quote">
+                        "Our artist portfolio website exceeded all expectations. The team understood our aesthetic vision and created a digital space that truly represents our artistic identity while being completely functional."
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar" style="background: #2b6cb0;">AF</div>
+                        <div>
+                            <div class="client-name">Artists Foundation</div>
+                            <div class="client-role">Digital Portfolio Platform</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="partner-logo">
-                    <div style="font-weight: bold; color: var(--primary);">ERICSSON</div>
-                </div>
-                <div class="partner-logo">
-                    <div style="font-weight: bold; color: var(--primary);">JUNIPER</div>
-                </div>
-                <div class="partner-logo">
-                    <div style="font-weight: bold; color: var(--primary);">MICROSOFT</div>
-                </div>
-                <div class="partner-logo">
-                    <div style="font-weight: bold; color: var(--primary);">VMWARE</div>
+                
+                <div class="client-card">
+                    <div class="client-quote">
+                        "Working with Digicell International on our museum's digital archives was a transformative experience. They digitized over 5000 artifacts with perfect attention to detail and cultural context preservation."
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar" style="background: #d69e2e;">NM</div>
+                        <div>
+                            <div class="client-name">National Museum</div>
+                            <div class="client-role">Digital Archive Project</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -661,29 +750,19 @@
     <section class="contact" id="contact">
         <div class="container">
             <div class="text-center">
-                <h2>Contact Us</h2>
-                <p>Get in touch with our team for customized telecommunications solutions</p>
+                <h2>Get In Touch</h2>
+                <p>Let's discuss how we can help digitize your cultural or artistic projects</p>
             </div>
             
             <div class="contact-grid">
                 <div class="contact-info">
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h4>Our Location</h4>
-                            <p>Telecommunications Hub<br>Digital District, Tech City</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
                             <i class="fas fa-phone-alt"></i>
                         </div>
                         <div>
-                            <h4>Phone Number</h4>
-                            <p>+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+                            <h4>Phone / WhatsApp</h4>
+                            <p>+92 348 5832844</p>
                         </div>
                     </div>
                     
@@ -693,7 +772,17 @@
                         </div>
                         <div>
                             <h4>Email Address</h4>
-                            <p>info@digicellinternational.com<br>support@digicellinternational.com</p>
+                            <p>skhamosh152@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Our Location</h4>
+                            <p>Islamabad, Pakistan<br>Digital Cultural Hub</p>
                         </div>
                     </div>
                     
@@ -703,17 +792,40 @@
                         </div>
                         <div>
                             <h4>Business Hours</h4>
-                            <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 1:00 PM</p>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 2:00 PM (PKT)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Connect With Us</h4>
+                            <div class="social-icons" style="margin-top: 10px;">
+                                <a href="https://www.linkedin.com/company/digicells" target="_blank" title="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://www.pinterest.com/digicells/" target="_blank" title="Pinterest">
+                                    <i class="fab fa-pinterest-p"></i>
+                                </a>
+                                <a href="https://www.youtube.com/@digicellinternational" target="_blank" title="YouTube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="https://www.facebook.com/digicellsinternational" target="_blank" title="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="contact-form">
                     <form id="contactForm">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" placeholder="Your Name / Organization" required>
                         <input type="email" placeholder="Your Email" required>
-                        <input type="text" placeholder="Subject" required>
-                        <textarea placeholder="Your Message" required></textarea>
+                        <input type="text" placeholder="Project Type (e.g., Website, Digital Archive)" required>
+                        <textarea placeholder="Tell us about your cultural/artistic project..." required></textarea>
                         <button type="submit" class="btn" style="width: 100%;">Send Message</button>
                     </form>
                 </div>
@@ -725,14 +837,24 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-about">
-                    <a href="#" class="footer-logo">Digicell International</a>
-                    <p>Leading provider of telecommunications and networking solutions with global reach and local expertise.</p>
+                <div class="footer-logo-container">
+                    <div class="footer-logo">
+                        <img src="https://raw.githubusercontent.com/digicellinternational/digicellinternational.github.io/main/digicells-logo.png" alt="Digicell International Logo" class="footer-logo-img">
+                    </div>
+                    <p>Digital content creators specializing in arts and culture representation through innovative technologies. Based in Islamabad, serving clients worldwide.</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/digicells" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.pinterest.com/digicells/" target="_blank" title="Pinterest">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@digicellinternational" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.facebook.com/digicellsinternational" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
                     </div>
                 </div>
                 
@@ -741,8 +863,8 @@
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#partners">Partners</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#clients">Client Testimonials</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -750,27 +872,29 @@
                 <div class="footer-links">
                     <h4>Our Services</h4>
                     <ul>
-                        <li><a href="#services">Wireless Solutions</a></li>
-                        <li><a href="#services">Satellite Communications</a></li>
-                        <li><a href="#services">Network Infrastructure</a></li>
-                        <li><a href="#services">Cybersecurity</a></li>
-                        <li><a href="#services">Cloud Services</a></li>
+                        <li><a href="#services">Digital Arts Representation</a></li>
+                        <li><a href="#services">Language Digitalization</a></li>
+                        <li><a href="#services">Website Development</a></li>
+                        <li><a href="#services">Brand Building</a></li>
+                        <li><a href="#services">Digital Content Creation</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
-                    <h4>Legal</h4>
+                    <h4>Resources</h4>
                     <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
-                        <li><a href="#">Sitemap</a></li>
+                        <li><a href="https://digicellinternational.shinisa.com" target="_blank">Main Website</a></li>
+                        <li><a href="https://shinisa.com/shop" target="_blank">Online Shop</a></li>
+                        <li><a href="#contact">Request Consultation</a></li>
+                        <li><a href="#contact">Project Inquiry</a></li>
+                        <li><a href="#contact">Cultural Partnership</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Digicell International. All rights reserved.</p>
+                <p>&copy; 2023 Digicell International. All rights reserved. | Digitalizing Arts & Culture Since 2020</p>
+                <p style="margin-top: 10px; font-size: 0.9rem;">Based in Islamabad, Pakistan | Contact: +92 348 5832844 | skhamosh152@gmail.com</p>
             </div>
         </div>
     </footer>
@@ -827,7 +951,7 @@
                 
                 // In a real implementation, you would send this data to a server
                 // For this demo, we'll just show an alert
-                alert(`Thank you for your message, ${name}! We will contact you at ${email} soon.`);
+                alert(`Thank you for your message, ${name}! We will contact you at ${email} within 24 hours to discuss your ${subject} project.`);
                 
                 // Reset form
                 this.reset();
@@ -842,6 +966,23 @@
             } else {
                 header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
             }
+        });
+
+        // Logo fallback in case GitHub raw URL has issues
+        document.addEventListener('DOMContentLoaded', function() {
+            const logo = document.querySelector('.logo-img');
+            const footerLogo = document.querySelector('.footer-logo-img');
+            
+            const fallbackLogo = function(imgElement) {
+                imgElement.onerror = function() {
+                    this.onerror = null;
+                    this.src = 'digicells-logo.png'; // Local fallback
+                    this.style.height = '45px';
+                };
+            };
+            
+            if(logo) fallbackLogo(logo);
+            if(footerLogo) fallbackLogo(footerLogo);
         });
     </script>
 </body>
