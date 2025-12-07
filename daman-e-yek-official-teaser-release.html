@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daman E Yek - Official Teaser Release | Digicell International</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:wght@400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a365d;
+            --primary-dark: #0d2438;
+            --secondary: #c53030;
+            --accent: #d69e2e;
+            --dark: #2d3748;
+            --light: #f7fafc;
+            --gray: #718096;
+            --white: #ffffff;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+            --gold: #d4af37;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: #f9f5f0;
+            background-image: linear-gradient(to bottom, #f9f5f0 0%, #f0e6d6 100%);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            font-size: 1.1rem;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .article-header {
+            background: linear-gradient(rgba(26, 54, 93, 0.95), rgba(13, 36, 56, 0.95)), url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 140px 0 80px;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-header:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent), var(--gold));
+        }
+
+        .article-header h1 {
+            color: var(--white);
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 30px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .meta-item i {
+            color: var(--accent);
+        }
+
+        .tag {
+            background: var(--accent);
+            color: var(--white);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        /* Content Layout */
+        .article-content {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 992px) {
+            .article-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .main-content {
+            background: var(--white);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .main-content:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            border-radius: 12px 12px 0 0;
+        }
+
+        /* Video Section */
+        .video-container {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, #fef9e7 0%, #fef5e7 100%);
+            border-left: 5px solid var(--accent);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: var(--shadow);
+        }
+
+        .highlight-box h3 {
+            color: var(--primary-dark);
+            margin-top: 0;
+        }
+
+        /* Credits Section */
+        .credits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .credit-card {
+            background: var(--light);
+            padding: 25px;
+            border-radius: 8px;
+            border-top: 4px solid var(--primary);
+            transition: var(--transition);
+        }
+
+        .credit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .credit-role {
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .credit-name {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .credit-desc {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-top: 8px;
+        }
+
+        /* Release Info */
+        .release-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .release-card {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .release-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .release-card i {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .release-date {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 10px 0;
+            color: var(--white);
+        }
+
+        .release-title {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 30px;
+            height: fit-content;
+        }
+
+        .sidebar-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        .sidebar-card h3 {
+            color: var(--primary);
+            margin-top: 0;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--light);
+        }
+
+        .project-info {
+            margin-top: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--light);
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .info-value {
+            color: var(--gray);
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, var(--secondary) 0%, #a52727 100%);
+            color: var(--white);
+            text-align: center;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: var(--transition);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(197, 48, 48, 0.3);
+        }
+
+        /* Navigation */
+        .post-navigation {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 0;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 40px;
+        }
+
+        .nav-button {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 25px;
+            background: var(--white);
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 500;
+            transition: var(--transition);
+            width: 48%;
+        }
+
+        .nav-button:hover {
+            background: var(--primary);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-button i {
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        .article-footer {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 60px 0 40px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .article-header {
+                padding: 100px 0 60px;
+            }
+            
+            .article-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .article-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .main-content {
+                padding: 30px 20px;
+            }
+            
+            .post-navigation {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-button {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .release-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .credits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Typography Enhancements */
+        .lead {
+            font-size: 1.3rem;
+            color: var(--primary);
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            font-family: 'Crimson Text', serif;
+        }
+
+        .quote {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--primary-dark);
+            text-align: center;
+            padding: 30px;
+            margin: 40px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .quote:before, .quote:after {
+            content: '"';
+            font-size: 4rem;
+            color: var(--accent);
+            position: absolute;
+            opacity: 0.3;
+        }
+
+        .quote:before {
+            top: 10px;
+            left: 20px;
+        }
+
+        .quote:after {
+            bottom: 10px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Article Header -->
+    <header class="article-header">
+        <div class="container">
+            <span class="tag">Exclusive Release</span>
+            <h1>"Daman E Yek" - A Historic Burushaski Musical Experience Begins</h1>
+            <p class="lead">Official Teaser Release Marks a New Era for Burushaski Art and Music</p>
+            
+            <div class="article-meta">
+                <div class="meta-item">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>Release Date: December 6, 2025</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-music"></i>
+                    <span>Genre: Cultural Music / Burushaski</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-globe-asia"></i>
+                    <span>Language: Burushaski with English Subtitles</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="article-content">
+            <!-- Main Content -->
+            <div class="main-content">
+                <div class="lead">
+                    December 6, 2025, marks a significant moment in the preservation and celebration of Burushaski cultural heritage as Digicell International proudly unveils the official teaser for "Daman E Yek." This soulful musical creation represents a masterful fusion of traditional Burushaski poetry with contemporary cinematic production, setting a new standard for regional artistic expression.
+                </div>
+
+                <!-- Video Section -->
+                <div class="video-container">
+                    <h2>Official Teaser</h2>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/3yFi873Jj1Y" 
+                                title="Daman E Yek - Official Teaser" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p style="margin-top: 15px; color: var(--gray); font-size: 0.95rem;">
+                        Watch the official teaser for "Daman E Yek" on YouTube
+                    </p>
+                </div>
+
+                <!-- Highlight Box -->
+                <div class="highlight-box">
+                    <h3>A Cultural Milestone</h3>
+                    <p>"Daman E Yek" represents more than just a musical release—it's a cultural preservation project that bridges centuries of Burushaski poetic tradition with modern artistic expression. The project showcases how technology and tradition can coexist to create something truly timeless.</p>
+                </div>
+
+                <!-- Creative Vision -->
+                <h2>The Creative Vision</h2>
+                <p>At the heart of "Daman E Yek" lies a profound poetic narrative written by <strong>Sardar Ali Khamosh</strong>, whose work captures the essence of Burushaski literary tradition while exploring universal themes of love, longing, and emotional connection. His writing maintains the delicate balance between classical sensitivity and contemporary relevance.</p>
+
+                <!-- Creative Team -->
+                <h2>The Creative Ensemble</h2>
+                <div class="credits-grid">
+                    <div class="credit-card">
+                        <div class="credit-role">Poet & Creative Director</div>
+                        <div class="credit-name">Sardar Ali Khamosh</div>
+                        <div class="credit-desc">Conceptualized the poetic narrative and visual storytelling, utilizing AI-assisted creative direction</div>
+                    </div>
+                    
+                    <div class="credit-card">
+                        <div class="credit-role">English Translation</div>
+                        <div class="credit-name">Muniza Hashim</div>
+                        <div class="credit-desc">Bridged linguistic barriers while preserving the emotional essence for global audiences</div>
+                    </div>
+                    
+                    <div class="credit-card">
+                        <div class="credit-role">Language Consultant</div>
+                        <div class="credit-name">Jamsheed Ali Figar</div>
+                        <div class="credit-desc">Ensured linguistic authenticity and cultural integrity in Burushaski script and subtitles</div>
+                    </div>
+                    
+                    <div class="credit-card">
+                        <div class="credit-role">Music Composer & Producer</div>
+                        <div class="credit-name">MT Iqbal (HaaHung Studio)</div>
+                        <div class="credit-desc">Crafted the cinematic soundscape blending traditional emotion with modern production</div>
+                    </div>
+                    
+                    <div class="credit-card">
+                        <div class="credit-role">Instrumentalist</div>
+                        <div class="credit-name">Sajid Karim</div>
+                        <div class="credit-desc">Provided organic instrumental layers that complement the song's poetic structure</div>
+                    </div>
+                </div>
+
+                <!-- Technological Innovation -->
+                <h2>Innovation Meets Tradition</h2>
+                <p>A groundbreaking aspect of "Daman E Yek" is its pioneering approach to visual storytelling. Sardar Ali Khamosh employed advanced AI tools including <strong>Gemini, DeepSeek, and ChatGPT</strong> to conceptualize and develop the video's narrative framework. This innovative methodology represents a significant leap forward in regional music production, demonstrating how artificial intelligence can enhance rather than replace human creativity.</p>
+
+                <!-- Quote -->
+                <div class="quote">
+                    "Daman E Yek is not just a song—it's a bridge between generations, a digital preservation of cultural memory, and a testament to how technology can amplify our deepest human expressions."
+                </div>
+
+                <!-- Release Dates -->
+                <h2>Release Timeline</h2>
+                <div class="release-info">
+                    <div class="release-card">
+                        <i class="fas fa-play-circle"></i>
+                        <div class="release-title">Teaser Release</div>
+                        <div class="release-date">Dec 6, 2025</div>
+                        <p>Official teaser now live</p>
+                    </div>
+                    
+                    <div class="release-card">
+                        <i class="fas fa-film"></i>
+                        <div class="release-title">Full Music Video</div>
+                        <div class="release-date">Dec 13, 2025</div>
+                        <p>Complete cinematic experience</p>
+                    </div>
+                </div>
+
+                <!-- Production Details -->
+                <h2>Production Details</h2>
+                <p>"Daman E Yek" is proudly <strong>sponsored by Shinisa Pvt Ltd</strong> and <strong>presented by Digicell International</strong>, reflecting a shared commitment to elevating Burushaski creative content on global digital platforms. This collaboration represents a significant investment in cultural preservation and artistic innovation.</p>
+
+                <!-- Cultural Impact -->
+                <h2>Cultural Significance</h2>
+                <p>The release of "Daman E Yek" comes at a crucial moment for minority language preservation. By bringing Burushaski poetry and music to international audiences through digital platforms, the project contributes to the global recognition and appreciation of linguistic diversity. It serves as both an artistic achievement and a cultural statement about the importance of preserving indigenous languages in the digital age.</p>
+
+                <!-- Navigation -->
+                <div class="post-navigation">
+                    <a href="https://digicellinternational.github.io" class="nav-button">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Back to Digicell International</span>
+                    </a>
+                    <a href="https://www.youtube.com/@digicellsinternational" target="_blank" class="nav-button" style="text-align: right;">
+                        <span>Watch on YouTube</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-card">
+                    <h3>Project Details</h3>
+                    <div class="project-info">
+                        <div class="info-item">
+                            <span class="info-label">Language:</span>
+                            <span class="info-value">Burushaski</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Subtitles:</span>
+                            <span class="info-value">English</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Duration:</span>
+                            <span class="info-value">Full video: 5:30 min</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Production:</span>
+                            <span class="info-value">HaaHung Studio</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Sponsor:</span>
+                            <span class="info-value">Shinisa Pvt Ltd</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Presenter:</span>
+                            <span class="info-value">Digicell International</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://youtu.be/3yFi873Jj1Y" target="_blank" class="cta-button">
+                        <i class="fab fa-youtube"></i> Watch Teaser Now
+                    </a>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Key Dates</h3>
+                    <div class="project-info">
+                        <div class="info-item">
+                            <span class="info-label">Teaser Launch:</span>
+                            <span class="info-value">Dec 6, 2025</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Full Release:</span>
+                            <span class="info-value">Dec 13, 2025</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Platform:</span>
+                            <span class="info-value">YouTube</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://www.youtube.com/@digicellsinternational" target="_blank" class="cta-button" style="background: linear-gradient(135deg, #FF0000 0%, #CC0000 100%);">
+                        <i class="fab fa-youtube"></i> Subscribe to Channel
+                    </a>
+                </div>
+
+                <div class="sidebar-card">
+                    <h3>Share This Release</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://digicellinternational.github.io/daman-e-yek-official-teaser-release.html" target="_blank" title="Share on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?text=Check out the official teaser for Daman E Yek - A Historic Burushaski Musical Experience&url=https://digicellinternational.github.io/daman-e-yek-official-teaser-release.html" target="_blank" title="Share on Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://digicellinternational.github.io/daman-e-yek-official-teaser-release.html&title=Daman E Yek Official Teaser Release" target="_blank" title="Share on LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="whatsapp://send?text=Check out Daman E Yek official teaser: https://digicellinternational.github.io/daman-e-yek-official-teaser-release.html" target="_blank" title="Share on WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="article-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <a href="https://digicellinternational.github.io" class="footer-logo">Digicell International</a>
+                    <p>Pioneering digital content creation with a focus on arts, culture, and linguistic preservation through innovative technology.</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/company/digicells" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@digicellinternational" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.facebook.com/digicellsinternational" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.pinterest.com/digicells/" target="_blank" title="Pinterest">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 style="color: white; margin-bottom: 20px;">Contact</h4>
+                    <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 10px;">
+                        <i class="fas fa-phone-alt" style="margin-right: 10px;"></i> +92 348 5832844
+                    </p>
+                    <p style="color: rgba(255, 255, 255, 0.8);">
+                        <i class="fas fa-envelope" style="margin-right: 10px;"></i> skhamosh152@gmail.com
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 style="color: white; margin-bottom: 20px;">Quick Links</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="https://digicellinternational.github.io" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; line-height: 2;">Home</a></li>
+                        <li><a href="https://digicellinternational.shinisa.com" target="_blank" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; line-height: 2;">Main Website</a></li>
+                        <li><a href="https://shinisa.com/shop" target="_blank" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; line-height: 2;">Online Shop</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Digicell International. All rights reserved. "Daman E Yek" is a cultural production presented by Digicell International and sponsored by Shinisa Pvt Ltd.</p>
+                <p style="margin-top: 10px; font-size: 0.9rem;">Release Date: December 6, 2025 | Full Video Release: December 13, 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Update meta dates
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            const yearElements = document.querySelectorAll('.current-year');
+            yearElements.forEach(el => {
+                el.textContent = currentYear;
+            });
+            
+            // Add subtle animation to release cards
+            const releaseCards = document.querySelectorAll('.release-card');
+            releaseCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+
+        // Share button functionality
+        document.querySelectorAll('.social-icons a').forEach(button => {
+            button.addEventListener('click', function(e) {
+                if(this.getAttribute('href').includes('whatsapp://')) {
+                    return; // Allow WhatsApp to open directly
+                }
+                e.preventDefault();
+                window.open(this.href, 'share-popup', 'width=600,height=400');
+            });
+        });
+    </script>
+</body>
+</html>
