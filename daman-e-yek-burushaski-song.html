@@ -1,198 +1,108 @@
-<!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* Lyrics Section Styles */
+.lyrics-container {
+    background: #f7fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2.5rem 0;
+    border: 1px solid #e2e8f0;
+}
 
-    <!-- Primary Meta Tags & SEO -->
-    <title>Daman E Yek - Official Burushaski Music Video | DigiCell International</title>
-    <meta name="description" content="Experience the official 'Daman E Yek' music video. A profound Burushaski song celebrating nature, faith, and culture by Sardar Ali Khamosh and Ali Rehmat Jan. English subtitles available.">
-    <link rel="canonical" href="https://digicellinternational.github.io/daman-e-yek-burushaski-song" />
+.section-intro {
+    color: #4a5568;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
 
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Daman E Yek - Official Burushaski Music Video | DigiCell International" />
-    <meta property="og:description" content="A historic musical experience celebrating Burushaski heritage. Watch the full video with English subtitles." />
-    <meta property="og:type" content="video.music" />
-    <meta property="og:url" content="https://digicellinternational.github.io/daman-e-yek-burushaski-song" />
-    <!-- You should add a relevant image link for og:image -->
-    <!-- <meta property="og:image" content="https://your-repo-path/poster-image.jpg" /> -->
-    <meta property="og:site_name" content="DigiCell International" />
+.verse {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #2b6cb0;
+}
 
-    <!-- Keywords for search engines (note: modern SEO focuses less on this tag, but it doesn't hurt) -->
-    <meta name="keywords" content="Burushaski song, Daman E Yek, cultural music, Hunza music, Gilgit-Baltistan, Sardar Ali Khamosh, Ali Rehmat Jan, language preservation, DigiCell International, official music video">
+.verse-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #edf2f7;
+}
 
-    <!-- Styles -->
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header, section, footer { margin-bottom: 2.5rem; }
-        h1 { color: #1a365d; margin-bottom: 0.5rem; font-size: 2.5rem; }
-        h2 { color: #2d3748; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; margin-top: 2rem; margin-bottom: 1rem; }
-        .tagline { font-size: 1.2rem; color: #4a5568; font-style: italic; margin-bottom: 1.5rem; }
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            margin: 2rem 0;
-            border-radius: 8px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-        .credits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-        .credit-card {
-            background: white;
-            padding: 1.2rem;
-            border-radius: 8px;
-            border-left: 4px solid #2b6cb0;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-        }
-        .credit-role { font-weight: 600; color: #2d3748; }
-        .credit-name { color: #2b6cb0; margin-top: 0.3rem; }
-        .lyrics-section {
-            background: #f7fafc;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-            font-family: 'Georgia', serif;
-        }
-        .burushaski { font-size: 1.3rem; margin-bottom: 0.5rem; }
-        .transliteration { font-style: italic; color: #718096; margin-bottom: 1rem; }
-        .translation { color: #2d3748; }
-        footer {
-            border-top: 1px solid #e2e8f0;
-            padding-top: 1.5rem;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #718096;
-        }
-        .social-links { margin-top: 1rem; }
-        .social-links a {
-            color: #2b6cb0;
-            text-decoration: none;
-            margin: 0 0.5rem;
-        }
-        .social-links a:hover { text-decoration: underline; }
-        @media (max-width: 768px) {
-            body { padding: 15px; }
-            h1 { font-size: 2rem; }
-        }
-    </style>
-</head>
-<body>
+.verse-number {
+    display: inline-block;
+    background: #2b6cb0;
+    color: white;
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
 
-    <header>
-        <h1>Daman E Yek: A Historic Burushaski Musical Experience</h1>
-        <p class="tagline">A profound song celebrating the abundant beauty and order in nature, filled with symbols of faith, hope, and healing.</p>
-        <p>This song is a simple yet profound appreciation for the abundant beauty and order in nature. Filled with symbols and metaphors, it expresses gratitude to the guardian of life for the many blessings surrounding us. Numerous examples from nature are linked with faith, hope, and the balance of pain and healing.</p>
-    </header>
+.lyrics-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
 
-    <section aria-label="Main Video">
-        <h2>Official Music Video</h2>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/Anvoq4m4Cpo" title="Daman E Yek - Official Burushaski Music Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <p><strong>Presented by ► DigiCell International</strong></p>
-    </section>
+.text-column h4 {
+    color: #2d3748;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed #cbd5e0;
+}
 
-    <section aria-label="Creative Team">
-        <h2>The Creative Team</h2>
-        <div class="credits-grid">
-            <div class="credit-card">
-                <div class="credit-role">Produced & Written by</div>
-                <div class="credit-name">Sardar Ali Khamosh</div>
-            </div>
-            <div class="credit-card">
-                <div class="credit-role">Vocals & Composition</div>
-                <div class="credit-name">Ali Rehmat Jan</div>
-            </div>
-            <div class="credit-card">
-                <div class="credit-role">English Translation</div>
-                <div class="credit-name">Muneeza Hashim</div>
-            </div>
-            <div class="credit-card">
-                <div class="credit-role">Burushaski Script</div>
-                <div class="credit-name">Jamsheed Aly Figaar</div>
-            </div>
-            <div class="credit-card">
-                <div class="credit-role">Music Director</div>
-                <div class="credit-name">MT Iqbal</div>
-            </div>
-            <div class="credit-card">
-                <div class="credit-role">Recording & Mastering</div>
-                <div class="credit-name">Haahung Studio, Gilgit</div>
-            </div>
-            <div class="credit-card">
-                <div class="credit-role">Instrumentalist</div>
-                <div class="credit-name">Sajid Karim</div>
-            </div>
-        </div>
-    </section>
+.burushaski-text {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #1a202c;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl;
+}
 
-    <section aria-label="Song Lyrics and Translation">
-        <h2>Lyrics & Translation</h2>
-        <p>The following presents the Burushaski lyrics, their transliteration, and the official English translation.</p>
+.transliteration-text {
+    font-style: italic;
+    color: #718096;
+    line-height: 1.6;
+    font-family: 'Courier New', Courier, monospace;
+    background: #fafafa;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
 
-        <div class="lyrics-section">
-            <p class="burushaski">کیࣷن دمنےࣷ ییࣷک یٹےࣷ<br>ہیࣷن دمنےࣷ ییࣷک یٹےࣷ</p>
-            <p class="transliteration">ken damane yek yaṭe<br>hen damane yek yaṭe</p>
-            <p class="translation"><strong>English Subtitles/Translation 1:</strong><br>Starting with the name of God<br>With his name who is only one</p>
-        </div>
+.translation-text {
+    color: #2d3748;
+    line-height: 1.6;
+    padding: 0.5rem;
+    background: #ebf8ff;
+    border-radius: 4px;
+    border-left: 3px solid #4299e1;
+}
 
-        <div class="lyrics-section">
-            <p class="burushaski">تھُوا برِݩ ہَکِم ہَکِن<br>شُوا برِݩ ہَکِم ہَکِن<br>تَوَہ نیࣷتے ین گُریࣷنچی<br>پِن دمنےࣷ ییࣷک یٹےࣷ</p>
-            <p class="transliteration">thuwa bariṅ hakim hakin<br>śuwa bariṅ hakim hakin<br>tawah nete yan gurenći<br>pin damane yek yaṭe</p>
-            <p class="translation"><strong>English Subtitles/Translation 2:</strong><br>Learn to learn the new knowledge/information<br>Learn to learn the right knowledge<br>gracefully pick it up with your hand<br>that pen with the name of God</p>
-        </div>
+/* Responsive Design for Lyrics */
+@media (max-width: 900px) {
+    .lyrics-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .verse {
+        padding: 1rem;
+    }
+    
+    .burushaski-text {
+        font-size: 1.2rem;
+    }
+}
 
-        <!-- Add more lyrics sections following the same pattern for the remaining verses -->
-        <p><em>... Additional verses follow the same structure ...</em></p>
-
-    </section>
-
-    <section aria-label="Cultural Significance">
-        <h2>Cultural & Linguistic Significance</h2>
-        <p>This project goes beyond music; it is an act of cultural preservation. By producing high-quality artistic content in Burushaski—a language with limited digital resources—DigiCell International contributes to keeping the language vibrant and accessible for a global audience[citation:3][citation:8]. The inclusion of meticulous transliteration and professional English translation makes this piece of heritage discoverable and meaningful to both native speakers and international enthusiasts[citation:6].</p>
-    </section>
-
-    <footer>
-        <p><strong>Produced by:</strong> DigiCell International</p>
-        <p><strong>Contact & Updates:</strong>
-            <br>Website: <a href="https://digicellinternational.github.io">digicellinternational.github.io</a>
-            <br>Portal: <a href="https://digicellinternational.shinisa.com">digicellinternational.shinisa.com</a>
-        </p>
-
-        <div class="social-links">
-            <strong>Connect with DigiCells:</strong><br>
-            <a href="https://www.linkedin.com/company/digicells" aria-label="LinkedIn">LinkedIn</a> |
-            <a href="https://www.pinterest.com/digicells" aria-label="Pinterest">Pinterest</a> |
-            <a href="https://www.youtube.com/@digicellinternational" aria-label="YouTube">YouTube</a> |
-            <a href="https://soundcloud.com/digicells" aria-label="SoundCloud">SoundCloud</a> |
-            <a href="https://www.facebook.com/digicellsinternational" aria-label="Facebook">Facebook</a>
-        </div>
-
-        <p style="margin-top: 1.5rem;">© 2025 DigiCell International. This project is dedicated to the preservation and celebration of Burushaski language and culture.</p>
-    </footer>
-
-</body>
-</html>
+@media (max-width: 768px) {
+    .lyrics-container {
+        padding: 1rem;
+    }
+    
+    .verse {
+        margin-bottom: 2rem;
+    }
+}
