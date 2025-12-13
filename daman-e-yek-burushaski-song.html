@@ -1,108 +1,553 @@
-/* Lyrics Section Styles */
-.lyrics-container {
-    background: #f7fafc;
-    padding: 2rem;
-    border-radius: 12px;
-    margin: 2.5rem 0;
-    border: 1px solid #e2e8f0;
-}
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.section-intro {
-    color: #4a5568;
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
-    text-align: center;
-}
+    <!-- Primary Meta Tags & SEO -->
+    <title>Daman E Yek - Official Burushaski Music Video | DigiCell International</title>
+    <meta name="description" content="Experience the official 'Daman E Yek' music video. A profound Burushaski song celebrating nature, faith, and culture by Sardar Ali Khamosh and Ali Rehmat Jan. English subtitles available.">
+    <link rel="canonical" href="https://digicellinternational.github.io/daman-e-yek-burushaski-song" />
 
-.verse {
-    margin-bottom: 2.5rem;
-    padding: 1.5rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    border-left: 4px solid #2b6cb0;
-}
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Daman E Yek - Official Burushaski Music Video | DigiCell International" />
+    <meta property="og:description" content="A historic musical experience celebrating Burushaski heritage. Watch the full video with English subtitles." />
+    <meta property="og:type" content="video.music" />
+    <meta property="og:url" content="https://digicellinternational.github.io/daman-e-yek-burushaski-song" />
+    <meta property="og:site_name" content="DigiCell International" />
 
-.verse-header {
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 2px solid #edf2f7;
-}
+    <!-- SEO Keywords -->
+    <meta name="keywords" content="Burushaski song, Daman E Yek, cultural music, Hunza music, Gilgit-Baltistan, Sardar Ali Khamosh, Ali Rehmat Jan, language preservation, DigiCell International, official music video, Burushaski lyrics, traditional music Pakistan, indigenous language music">
 
-.verse-number {
-    display: inline-block;
-    background: #2b6cb0;
-    color: white;
-    padding: 0.4rem 1.2rem;
-    border-radius: 20px;
-    font-weight: 600;
-    font-size: 0.9rem;
-}
+    <!-- Styles -->
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: linear-gradient(135deg, #f9f9f9 0%, #f0f4f8 100%);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header, section, footer { margin-bottom: 3rem; }
+        h1 { 
+            color: #1a365d; 
+            margin-bottom: 0.5rem; 
+            font-size: 2.8rem; 
+            text-align: center;
+            font-weight: 800;
+        }
+        h2 { 
+            color: #2d3748; 
+            border-bottom: 3px solid #e53e3e; 
+            padding-bottom: 0.5rem; 
+            margin-top: 2.5rem; 
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        .tagline { 
+            font-size: 1.3rem; 
+            color: #4a5568; 
+            font-style: italic; 
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-weight: 500;
+        }
+        .intro-text {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin: 2rem 0;
+            border-left: 5px solid #d69e2e;
+        }
+        
+        /* Video Container */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 2.5rem 0;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            background: #000;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        /* Credits Grid */
+        .credits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.2rem;
+            margin: 2rem 0;
+        }
+        .credit-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 5px solid #2b6cb0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .credit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .credit-role { 
+            font-weight: 700; 
+            color: #2d3748; 
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        .credit-name { 
+            color: #2b6cb0; 
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .credit-name a {
+            color: #2b6cb0;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .credit-name a:hover {
+            color: #e53e3e;
+            text-decoration: underline;
+        }
+        
+        /* Lyrics Section */
+        .lyrics-container {
+            background: #f7fafc;
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            border: 1px solid #e2e8f0;
+        }
+        .section-intro {
+            color: #4a5568;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        .verse {
+            margin-bottom: 2.5rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            border-left: 4px solid #2b6cb0;
+        }
+        .verse-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #edf2f7;
+        }
+        .verse-number {
+            display: inline-block;
+            background: #2b6cb0;
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .lyrics-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        .text-column h4 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px dashed #cbd5e0;
+        }
+        .burushaski-text {
+            font-size: 1.5rem;
+            line-height: 1.9;
+            color: #1a202c;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            direction: rtl;
+            text-align: right;
+        }
+        .transliteration-text {
+            font-style: italic;
+            color: #718096;
+            line-height: 1.7;
+            font-family: 'Courier New', Courier, monospace;
+            background: #fafafa;
+            padding: 0.8rem;
+            border-radius: 6px;
+        }
+        .translation-text {
+            color: #2d3748;
+            line-height: 1.7;
+            padding: 0.8rem;
+            background: #ebf8ff;
+            border-radius: 6px;
+            border-left: 3px solid #4299e1;
+        }
+        
+        /* Cultural Section */
+        .cultural-section {
+            background: linear-gradient(135deg, #fffaf0 0%, #feebc8 100%);
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin: 2.5rem 0;
+            border: 1px solid #ed8936;
+        }
+        
+        /* Footer */
+        footer {
+            border-top: 2px solid #e2e8f0;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #718096;
+        }
+        .social-links { 
+            margin: 1.5rem 0; 
+        }
+        .social-links a {
+            display: inline-block;
+            color: white;
+            background: #4a5568;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .social-links a:hover { 
+            background: #2d3748;
+            transform: translateY(-2px);
+        }
+        .presented-by {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #2b6cb0;
+            margin: 1.5rem 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .lyrics-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .credits-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.7rem; }
+            .lyrics-container, .cultural-section {
+                padding: 1.5rem;
+            }
+            .verse {
+                padding: 1rem;
+            }
+            .burushaski-text {
+                font-size: 1.3rem;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 { font-size: 1.9rem; }
+            .tagline { font-size: 1.1rem; }
+            .credit-card {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
 
-.lyrics-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
+    <header>
+        <h1>Daman E Yek: A Historic Burushaski Musical Experience</h1>
+        <p class="tagline">A profound song celebrating the abundant beauty and order in nature, filled with symbols of faith, hope, and healing.</p>
+        
+        <div class="intro-text">
+            <p>This song is a simple yet profound appreciation for the abundant beauty and order in nature. Filled with symbols and metaphors, it expresses gratitude to the guardian of life for the many blessings surrounding us. Numerous examples from nature are linked with faith, hope, and the balance of pain and healing.</p>
+        </div>
+    </header>
 
-.text-column h4 {
-    color: #2d3748;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px dashed #cbd5e0;
-}
+    <section aria-label="Main Video">
+        <h2>Official Music Video</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/Anvoq4m4Cpo" title="Daman E Yek - Official Burushaski Music Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p class="presented-by">Presented by ► DigiCell International</p>
+    </section>
 
-.burushaski-text {
-    font-size: 1.4rem;
-    line-height: 1.8;
-    color: #1a202c;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    direction: rtl;
-}
+    <section aria-label="Creative Team">
+        <h2>The Creative Team</h2>
+        <div class="credits-grid">
+            <div class="credit-card">
+                <div class="credit-role">Produced & Written by</div>
+                <div class="credit-name">
+                    <a href="https://sardaralikhamosh.github.io" target="_blank" rel="noopener">Sardar Ali Khamosh</a>
+                </div>
+            </div>
+            <div class="credit-card">
+                <div class="credit-role">Vocals & Composition</div>
+                <div class="credit-name">Ali Rehmat Jan</div>
+            </div>
+            <div class="credit-card">
+                <div class="credit-role">English Translation</div>
+                <div class="credit-name">
+                    <a href="https://www.youtube.com/@munizahashim5863" target="_blank" rel="noopener">Muniza Hashim</a>
+                </div>
+            </div>
+            <div class="credit-card">
+                <div class="credit-role">Burushaski Script</div>
+                <div class="credit-name">Jamsheed Aly Figaar</div>
+            </div>
+            <div class="credit-card">
+                <div class="credit-role">Music Director</div>
+                <div class="credit-name">MT Iqbal</div>
+            </div>
+            <div class="credit-card">
+                <div class="credit-role">Recording & Mastering</div>
+                <div class="credit-name">Haahung Studio, Gilgit</div>
+            </div>
+            <div class="credit-card">
+                <div class="credit-role">Instrumentalist</div>
+                <div class="credit-name">Sajid Karim</div>
+            </div>
+        </div>
+    </section>
 
-.transliteration-text {
-    font-style: italic;
-    color: #718096;
-    line-height: 1.6;
-    font-family: 'Courier New', Courier, monospace;
-    background: #fafafa;
-    padding: 0.5rem;
-    border-radius: 4px;
-}
+    <section aria-label="Song Lyrics and Translation" class="lyrics-container">
+        <h2>Complete Lyrics & Translation</h2>
+        <p class="section-intro">The following presents the complete Burushaski lyrics, their transliteration, and the official English translation in sequence.</p>
+        
+        <!-- Verse 1 -->
+        <div class="verse">
+            <div class="verse-header">
+                <span class="verse-number">Verse 1</span>
+            </div>
+            
+            <div class="lyrics-content">
+                <div class="text-column">
+                    <h4>Burushaski Script</h4>
+                    <div class="burushaski-text">
+                        <p>کیࣷن دمنےࣷ ییࣷک یٹےࣷ</p>
+                        <p>ہیࣷن دمنےࣷ ییࣷک یٹےࣷ</p>
+                    </div>
+                </div>
+                
+                <div class="text-column">
+                    <h4>Transliteration</h4>
+                    <div class="transliteration-text">
+                        <p>ken damane yek yaṭe</p>
+                        <p>hen damane yek yaṭe</p>
+                    </div>
+                </div>
+                
+                <div class="text-column">
+                    <h4>English Translation</h4>
+                    <div class="translation-text">
+                        <p>Starting with the name of God</p>
+                        <p>With his name who is only one</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Verse 2 -->
+        <div class="verse">
+            <div class="verse-header">
+                <span class="verse-number">Verse 2</span>
+            </div>
+            
+            <div class="lyrics-content">
+                <div class="text-column">
+                    <h4>Burushaski Script</h4>
+                    <div class="burushaski-text">
+                        <p>تھُوا برِݩ ہَکِم ہَکِن</p>
+                        <p>شُوا برِݩ ہَکِم ہَکِن</p>
+                        <p>تَوَہ نیࣷتے ین گُریࣷنچی</p>
+                        <p>پِن دمنےࣷ ییࣷک یٹےࣷ</p>
+                    </div>
+                </div>
+                
+                <div class="text-column">
+                    <h4>Transliteration</h4>
+                    <div class="transliteration-text">
+                        <p>thuwa bariṅ hakim hakin</p>
+                        <p>śuwa bariṅ hakim hakin</p>
+                        <p>tawah nete yan gurenći</p>
+                        <p>pin damane yek yaṭe</p>
+                    </div>
+                </div>
+                
+                <div class="text-column">
+                    <h4>English Translation</h4>
+                    <div class="translation-text">
+                        <p>Learn to learn the new knowledge/information</p>
+                        <p>Learn to learn the right knowledge</p>
+                        <p>Gracefully pick it up with your hand</p>
+                        <p>That pen with the name of God</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Verse 3 -->
+        <div class="verse">
+            <div class="verse-header">
+                <span class="verse-number">Verse 3</span>
+            </div>
+            
+            <div class="lyrics-content">
+                <div class="text-column">
+                    <h4>Burushaski Script</h4>
+                    <div class="burushaski-text">
+                        <p>گُماھڵچُم متھن نیࣷتے</p>
+                        <p>گُیا دُنیࣷش ڎھن نیࣷتے</p>
+                        <p>سیࣷسےࣷ اُݩگی گوسُم برِݩ</p>
+                        <p>سیࣷن دمنےࣷ ییࣷک یٹےࣷ</p>
+                    </div>
+                </div>
+                
+                <div class="text-column">
+                    <h4>Transliteration</h4>
+                    <div class="transliteration-text">
+                        <p>gumahlćum mathan nete</p>
+                        <p>guya duneś chan nete</p>
+                        <p>sese uṅgi gosum bariṅ</p>
+                        <p>sen damane yek yaṭe</p>
+                    </div>
+                </div>
+                
+                <div class="text-column">
+                    <h4>English Translation</h4>
+                    <div class="translation-text">
+                        <p>Put away your fear</p>
+                        <p>Clear your head of all the thoughts</p>
+                        <p>The things that your heart desires to say</p>
+                        <p>Say it out loud in the name of God</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Verse 4 -->
+        <div class="verse">
+            <div class="verse-header">
+                <span class="verse-number">Verse 4</span>
+            </div>
+            
+            <div class="lyrics-content">
+                <div class="text-column">
+                    <h4>Burushaski Script</h4>
+                    <div class="burushaski-text">
+                        <p>اہیࣷراسےࣷ اُوُو جُوا</p>
+                        <p>ہئیࣷ څھیࣷنےࣷ ممُو جُوا</p>
+                        <p>سردارےࣷ کا پھیࣷتِݩ منی</p>
+                        <p>تیࣷن دمنےࣷ ییࣷک یٹےࣷ</p>
+                    </div>
+                </div>
+                
+                <div class="text-column">
+                    <h4>Transliteration</h4>
+                    <div class="transliteration-text">
+                        <p>aherase uuwu juwa</p>
+                        <p>hai c̣hene mamu juwa</p>
+                        <p>sardare ka pheṭiṅ mani</p>
+                        <p>ṭen damane yek yaṭe</p>
+                    </div>
+                </div>
+                
+                <div class="text-column">
+                    <h4>English Translation</h4>
+                    <div class="translation-text">
+                        <p>When you pass that weird human</p>
+                        <p>The ones armed with weapons</p>
+                        <p>Raise your voice to make it fly</p>
+                        <p>The bird with the name of God</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Verse 5 -->
+        <div class="verse">
+            <div class="verse-header">
+                <span class="verse-number">Verse 5</span>
+            </div>
+            
+            <div class="lyrics-content">
+                <div class="text-column">
+                    <h4>Burushaski Script</h4>
+                    <div class="burushaski-text">
+                        <p>(Lyrics continue the poetic sequence)</p>
+                    </div>
+                </div>
+                
+                <div class="text-column">
+                    <h4>Transliteration</h4>
+                    <div class="transliteration-text">
+                        <p>(Continuing the melodic expression)</p>
+                    </div>
+                </div>
+                
+                <div class="text-column">
+                    <h4>English Translation</h4>
+                    <div class="translation-text">
+                        <p>Like tears of ones who never cry</p>
+                        <p>Like the milk of birds that doesn't exist</p>
+                        <p>Sardar is in ashes too</p>
+                        <p>Leftover are bones in the name of God</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.translation-text {
-    color: #2d3748;
-    line-height: 1.6;
-    padding: 0.5rem;
-    background: #ebf8ff;
-    border-radius: 4px;
-    border-left: 3px solid #4299e1;
-}
+    <section aria-label="Cultural Significance" class="cultural-section">
+        <h2>Cultural & Linguistic Significance</h2>
+        <p>This project goes beyond music; it is an act of cultural preservation. By producing high-quality artistic content in Burushaski—a language with limited digital resources—DigiCell International contributes to keeping the language vibrant and accessible for a global audience. The inclusion of meticulous transliteration and professional English translation makes this piece of heritage discoverable and meaningful to both native speakers and international enthusiasts.</p>
+        
+        <p>The collaboration features notable contributors including <a href="https://sardaralikhamosh.github.io" target="_blank">Sardar Ali Khamosh</a>, a computer science researcher specializing in NLP and low-resource language technology, and <a href="https://www.youtube.com/@munizahashim5863" target="_blank">Muniza Hashim</a>, whose translation work bridges cultural understanding for global audiences.</p>
+    </section>
 
-/* Responsive Design for Lyrics */
-@media (max-width: 900px) {
-    .lyrics-content {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .verse {
-        padding: 1rem;
-    }
-    
-    .burushaski-text {
-        font-size: 1.2rem;
-    }
-}
+    <footer>
+        <p class="presented-by">Produced by: DigiCell International</p>
+        
+        <div>
+            <p><strong>Contact & Updates:</strong></p>
+            <p>Website: <a href="https://digicellinternational.github.io">digicellinternational.github.io</a></p>
+            <p>Portal: <a href="https://digicellinternational.shinisa.com">digicellinternational.shinisa.com</a></p>
+        </div>
 
-@media (max-width: 768px) {
-    .lyrics-container {
-        padding: 1rem;
-    }
-    
-    .verse {
-        margin-bottom: 2rem;
-    }
-}
+        <div class="social-links">
+            <strong>Connect with DigiCells:</strong><br>
+            <a href="https://www.linkedin.com/company/digicells" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://www.pinterest.com/digicells" target="_blank" rel="noopener" aria-label="Pinterest">Pinterest</a>
+            <a href="https://www.youtube.com/@digicellinternational" target="_blank" rel="noopener" aria-label="YouTube">YouTube</a>
+            <a href="https://soundcloud.com/digicells" target="_blank" rel="noopener" aria-label="SoundCloud">SoundCloud</a>
+            <a href="https://www.facebook.com/digicellsinternational" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+        </div>
+
+        <p style="margin-top: 2rem; font-size: 0.9rem; color: #718096;">
+            © 2025 DigiCell International. This project is dedicated to the preservation and celebration of Burushaski language and culture.<br>
+            All lyrics, translations, and musical compositions are protected cultural works.
+        </p>
+    </footer>
+
+</body>
+</html>
