@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Legal Agreement | HamariBooking.com Development Contract</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts for clean legal styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #eef2f5;
+            font-family: 'Inter', sans-serif;
+            color: #1e2a3e;
+            padding: 40px 20px;
+            line-height: 1.55;
+        }
+
+        .contract-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.15);
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        /* Header / brand bar */
+        .contract-header {
+            background: #0a2b3e;
+            padding: 25px 40px;
+            border-bottom: 5px solid #c7a252;
+        }
+
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .brand h1 {
+            font-family: 'Cormorant Garamond', serif;
+            color: white;
+            font-size: 1.9rem;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            margin: 0;
+        }
+
+        .brand p {
+            color: #bbd4e9;
+            margin: 5px 0 0;
+            font-size: 0.9rem;
+        }
+
+        .contract-badge {
+            background: #c7a25220;
+            backdrop-filter: blur(4px);
+            padding: 8px 18px;
+            border-radius: 60px;
+            border: 1px solid #c7a252;
+            color: #f5e2b0;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .contract-body {
+            padding: 40px 45px;
+        }
+
+        .agreement-title {
+            font-size: 2rem;
+            font-weight: 700;
+            border-left: 6px solid #c7a252;
+            padding-left: 20px;
+            margin-bottom: 28px;
+            color: #0f2c3b;
+        }
+
+        .legal-clause {
+            margin-bottom: 28px;
+        }
+
+        .legal-clause h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1e4a6e;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legal-clause p, .legal-clause li {
+            color: #2c3e4e;
+            margin-bottom: 8px;
+            font-size: 0.98rem;
+        }
+
+        .highlight {
+            background: #fef6e6;
+            padding: 12px 20px;
+            border-left: 4px solid #c7a252;
+            margin: 18px 0;
+            border-radius: 12px;
+        }
+
+        .two-column-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 30px 0 20px;
+            background: #f8fafc;
+            padding: 20px 25px;
+            border-radius: 20px;
+        }
+
+        .info-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .info-group strong {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #567e9c;
+            margin-bottom: 6px;
+        }
+
+        .info-group span {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .budget-break {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 18px 25px;
+            margin: 25px 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .budget-break h4 {
+            color: #0f2c3b;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        .grid-budget {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .budget-card {
+            background: #f1f5f9;
+            border-radius: 20px;
+            padding: 15px 20px;
+            flex: 1;
+        }
+
+        .signature-area {
+            margin-top: 55px;
+            border-top: 2px dashed #cbd5e1;
+            padding-top: 40px;
+        }
+
+        /* Signature wrapper styling based on requirement + improved layout */
+        .sig-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+            margin: 25px 0 35px;
+        }
+
+        .sig-block {
+            flex: 1;
+            min-width: 280px;
+            background: #fefefe;
+            border: 1px solid #e2edf2;
+            border-radius: 24px;
+            padding: 20px 22px;
+            box-shadow: 0 6px 12px -8px rgba(0,0,0,0.05);
+            transition: 0.2s;
+        }
+
+        .sig-block-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            background: #eef3f9;
+            display: inline-block;
+            padding: 4px 16px;
+            border-radius: 40px;
+            margin-bottom: 18px;
+            color: #155f7c;
+        }
+
+        .sig-canvas {
+            border: 1px solid #bdd3e6;
+            border-radius: 14px;
+            background: white;
+            width: 100%;
+            height: auto;
+            cursor: crosshair;
+            touch-action: none;
+            margin-bottom: 10px;
+        }
+
+        .sig-controls {
+            display: flex;
+            gap: 12px;
+            margin: 12px 0 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-clear, .btn-upload {
+            background: #f0f4f8;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.2s;
+            font-family: inherit;
+        }
+
+        .btn-clear:hover {
+            background: #ffe0e0;
+            color: #b91c1c;
+        }
+
+        .btn-upload {
+            background: #e9ecef;
+            position: relative;
+            display: inline-block;
+        }
+
+        .btn-upload input {
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            cursor: pointer;
+        }
+
+        .sig-field {
+            margin-top: 12px;
+        }
+
+        .sig-field label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #4b6a82;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .sig-field input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #cbdde9;
+            border-radius: 14px;
+            font-family: 'Inter', monospace;
+            font-size: 0.9rem;
+        }
+
+        .ceo-sig-img {
+            min-height: 100px;
+            background: #f9fafc;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 12px 0;
+            border: 1px dashed #9bb7ce;
+            padding: 8px;
+        }
+
+        .img-fallback-ceo-sig {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            font-weight: 500;
+            color: #2c6280;
+        }
+
+        .sig-placeholder-line {
+            width: 140px;
+            height: 2px;
+            background: #bfd7e8;
+        }
+
+        .upload-cnic-section {
+            background: #fefaf0;
+            border-radius: 20px;
+            padding: 20px 25px;
+            margin: 25px 0 15px;
+            border: 1px solid #eeddbb;
+        }
+
+        .cnic-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 12px;
+        }
+
+        .cnic-item {
+            flex: 1;
+        }
+
+        .file-label {
+            background: #eef2f5;
+            display: inline-block;
+            padding: 10px 18px;
+            border-radius: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        .file-preview {
+            font-size: 0.75rem;
+            color: #31736e;
+            margin-top: 8px;
+            word-break: break-all;
+        }
+
+        button.submit-contract {
+            background: #1e5f7a;
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 48px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 320px;
+        }
+
+        button.submit-contract:hover {
+            background: #0f445b;
+            transform: scale(1.01);
+        }
+
+        .footer-note {
+            font-size: 0.7rem;
+            text-align: center;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 1px solid #e2edf2;
+            color: #6c8aa3;
+        }
+
+        @media (max-width: 750px) {
+            .contract-body {
+                padding: 25px 20px;
+            }
+            .sig-wrapper {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="contract-container">
+    <div class="contract-header">
+        <div class="header-flex">
+            <div class="brand">
+                <h1>⚖️ HamariBooking.com · Development Agreement</h1>
+                <p>Hotel & Guesthouse Booking Platform (WordPress) | Legal Contract</p>
+            </div>
+            <div class="contract-badge">
+                <i class="fas fa-file-signature"></i> Binding Agreement v1.0
+            </div>
+        </div>
+    </div>
+
+    <div class="contract-body">
+        <div class="agreement-title">
+            <i class="fas fa-handshake" style="color:#c7a252; margin-right: 12px;"></i> 
+            Master Services Contract
+        </div>
+        
+        <!-- Parties & contact info -->
+        <div class="two-column-details">
+            <div class="info-group">
+                <strong><i class="fas fa-building"></i> Client (Project Owner)</strong>
+                <span>HamariBooking.com / Hamari Booking (Client)</span>
+                <p style="margin-top: 6px;">Represented by: <strong>HamariBooking Management</strong><br>
+                Project: Online booking system for hotels, guest houses, private properties.</p>
+            </div>
+            <div class="info-group">
+                <strong><i class="fas fa-code-branch"></i> Developer (Covered Entity)</strong>
+                <span>Rukhsar Mahmood</span>
+                <p>📞 +92 341 2314273<br>
+                ✉️ Contact via Digicells International only</p>
+            </div>
+            <div class="info-group">
+                <strong><i class="fas fa-chart-line"></i> Business Associate</strong>
+                <span>Digicells International (SEO & Management)</span>
+                <p>CEO: Sardar Ali | 📞 +92 341 5336669<br>
+                📧 info@shinisa.com</p>
+            </div>
+        </div>
+
+        <!-- Budget details following the specification: 50,000 total, 20% deduction etc -->
+        <div class="budget-break">
+            <h4><i class="fas fa-coins"></i> Financial Terms & Budget Allocation</h4>
+            <div class="grid-budget">
+                <div class="budget-card">
+                    <strong>💰 Total Project Budget</strong><br>
+                    <span style="font-size: 1.6rem; font-weight: 800;">PKR 50,000</span>
+                </div>
+                <div class="budget-card">
+                    <strong>🔧 Digicells International (20%)</strong><br>
+                    PKR 10,000 — Project Management + SEO (6 months support & off-page strategy)
+                </div>
+                <div class="budget-card">
+                    <strong>⚙️ Development & Execution Fee (80%)</strong><br>
+                    PKR 40,000 — Payable to <strong>Rukhsar Mahmood</strong><br>
+                    <span style="font-size:0.8rem;">(Covered Entity: full-stack development, booking engine, AI chatbot, backend)</span>
+                </div>
+            </div>
+            <div class="highlight" style="margin-top: 20px;">
+                <i class="fas fa-shield-alt"></i> <strong>6 Months Free Technical Support</strong> — Digicells International ensures all communication bridges and provides SEO + troubleshooting for HamariBooking.com. Rukhsar Mahmood guarantees bug fixes related to development scope.
+            </div>
+        </div>
+
+        <!-- legal clauses -->
+        <div class="legal-clause">
+            <h3><i class="fas fa-balance-scale"></i> 1. Scope of Work & Deliverables</h3>
+            <p>Rukhsar Mahmood (developer) shall develop a fully functional WordPress-based hotel/guesthouse booking platform mirroring Booking.com functionality, including: property search, online payments (Stripe/PayPal), automated PDF invoices, email/SMS (WhatsApp via Twilio API), AI-powered popup chatbot (Claude API or equivalent) for answering user queries about HamariBooking.com, availability calendars, admin dashboard, and all frontend/backend features listed in the original proposal (v2.0). The platform must support hotels, guest houses, and private property listings.</p>
+        </div>
+
+        <div class="legal-clause">
+            <h3><i class="fas fa-user-secret"></i> 2. Data Security & Confidentiality</h3>
+            <p>Due to the nature of the system, private data (including credit card details through payment gateways) may be processed. The client and end-users are solely responsible for safeguarding any private credentials they choose to share outside secure PCI-compliant flows. If any party (including developer or business associate) shares private, confidential details without explicit consent from the client, the client reserves the authority to pursue legal action through appropriate legal channels. All parties agree to standard data protection practices and shall not disclose sensitive proprietary information.</p>
+        </div>
+
+        <div class="legal-clause">
+            <h3><i class="fas fa-comments"></i> 3. Communication & Non-Circumvention</h3>
+            <p>Direct communication between the Client (HamariBooking) and the Developer (Rukhsar Mahmood) is strictly prohibited without involvement of Digicells International. All coordination, requirements, clarifications, and approvals must flow through Sardar Ali (CEO, Digicells International) via +92 341 5336669 / info@shinisa.com. This ensures project governance, conflict resolution, and quality assurance. Any violation of this clause will result in liability fees.</p>
+        </div>
+
+        <div class="legal-clause">
+            <h3><i class="fas fa-chalkboard-teacher"></i> 4. Responsibilities: Digicells International</h3>
+            <p>Digicells International acts as the prime intermediary, managing all communications, SEO optimization (on-page + off-page), domain authority building, and providing 6 months of free technical support post-launch. The company also ensures that the developer adheres to the proposal timeline and quality benchmarks. All third-party service costs (hosting, premium plugins, APIs) remain client’s responsibility as per original proposal.</p>
+        </div>
+
+        <div class="legal-clause">
+            <h3><i class="fas fa-laptop-code"></i> 5. Developer Obligations (Rukhsar Mahmood)</h3>
+            <p>Rukhsar Mahmood is fully responsible for web development, UI/UX implementation, custom WordPress coding, booking engine integration, payment gateway hooks, AI chatbot integration (popup that can answer user queries regarding HamariBooking.com), WhatsApp notifications, PDF invoice automation, database design, and all technical deliverables described in the Hamaribooking_Proposal_v2.pdf. The developer must deliver a stable, scalable platform within agreed timeline and provide necessary documentation to Digicells International.</p>
+        </div>
+
+        <!-- AI Chatbot clause explicit -->
+        <div class="highlight">
+            <i class="fas fa-robot"></i> <strong>AI Popup Chat Agent:</strong> The platform shall include an intelligent popup chatbot (powered by Claude API or similar) capable of answering user questions related to HamariBooking.com — including property queries, cancellation policy, booking steps, pricing, and general assistance. The chat widget must be visible on all pages.
+        </div>
+
+        <!-- CNIC upload + signature block (editable, signature canvas for Rukhsar, and fixed logo for Digicells) -->
+        <div class="upload-cnic-section">
+            <h4><i class="fas fa-id-card"></i> Verification Documents (CNIC Upload)</h4>
+            <p><strong>Covered Entity (Rukhsar Mahmood)</strong> must provide scanned PDF/Image of CNIC (Front & Back) as part of agreement acknowledgment.</p>
+            <div class="cnic-flex">
+                <div class="cnic-item">
+                    <label><strong>CNIC Front (Image/PDF)</strong></label><br>
+                    <label class="file-label" for="cnicFront"><i class="fas fa-upload"></i> Choose file</label>
+                    <input type="file" id="cnicFront" accept=".jpg,.png,.pdf,.jpeg" style="display:none;">
+                    <div id="frontPreview" class="file-preview">No file chosen</div>
+                </div>
+                <div class="cnic-item">
+                    <label><strong>CNIC Back (Image/PDF)</strong></label><br>
+                    <label class="file-label" for="cnicBack"><i class="fas fa-upload"></i> Choose file</label>
+                    <input type="file" id="cnicBack" accept=".jpg,.png,.pdf,.jpeg" style="display:none;">
+                    <div id="backPreview" class="file-preview">No file chosen</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Signature area: uses custom canvas for Rukhsar Mahmood (covered entity) and Digicells International with pre-defined signature asset + editable name field -->
+        <div class="signature-area">
+            <h3 style="margin-bottom: 20px;"><i class="fas fa-pen-fancy"></i> Execution & Signatures</h3>
+            <div class="sig-wrapper">
+                <!-- Covered Entity: Rukhsar Mahmood (signature + editable print name / date) -->
+                <div class="sig-block">
+                    <div class="sig-block-title">✍️ Covered Entity — Rukhsar Mahmood (Developer)</div>
+                    <canvas class="sig-canvas" id="devSigCanvas" width="380" height="140"></canvas>
+                    <div class="sig-controls">
+                        <button class="btn-clear" onclick="clearCanvas('devSigCanvas')"><i class="fas fa-eraser"></i> Clear</button>
+                        <label class="btn-upload">
+                            <i class="fas fa-image"></i> Upload Signature
+                            <input type="file" accept="image/*" onchange="uploadSignatureImage(event, 'devSigCanvas')">
+                        </label>
+                    </div>
+                    <div class="sig-field">
+                        <label>Print Full Name (Editable)</label>
+                        <input type="text" id="devPrintName" placeholder="Rukhsar Mahmood" value="Rukhsar Mahmood">
+                    </div>
+                    <div class="sig-field">
+                        <label>Date of Signing</label>
+                        <input type="date" id="devSigDate">
+                    </div>
+                    <div class="sig-field">
+                        <label>Designation</label>
+                        <input type="text" id="devTitle" placeholder="Lead WordPress Developer" value="Full Stack Developer">
+                    </div>
+                </div>
+
+                <!-- Business Associate: Digicells International with CEO Sardar Ali signature image upload from ./sign.png plus editable fallback -->
+                <div class="sig-block">
+                    <div class="sig-block-title">🏢 Business Associate — Digicells International</div>
+                    <div class="ceo-sig-img" id="ceoSigContainer">
+                        <!-- CEO signature using built-in asset "sign.png" (based on requirement: signature is uploaded as sign.png) -->
+                        <img id="ceoSigImg" src="sign.png" alt="CEO Signature — Sardar Ali" 
+                             style="max-width:100%; max-height:110px; object-fit:contain; display:block; margin:0 auto; border-radius:12px;"
+                             onerror="this.onerror=null; this.style.display='none'; document.getElementById('ceoSigFallback').style.display='flex';">
+                        <div id="ceoSigFallback" style="display: none; flex-direction:column; align-items:center; gap:8px; padding:12px;">
+                            <div class="sig-placeholder-line"></div>
+                            <span>Sardar Ali (CEO)</span>
+                            <small style="color:#5e7c9c;">Authorized Signature Placeholder</small>
+                        </div>
+                    </div>
+                    <div class="sig-field">
+                        <label>Print Name (CEO)</label>
+                        <input type="text" id="ceoPrintName" value="Sardar Ali">
+                    </div>
+                    <div class="sig-field">
+                        <label>Date</label>
+                        <input type="date" id="ceoSigDate">
+                    </div>
+                    <div class="sig-field">
+                        <label>Designation / Title</label>
+                        <input type="text" id="ceoTitle" value="Chief Executive Officer, Digicells International">
+                    </div>
+                    <p style="font-size:0.7rem; margin-top:12px;"><i class="fas fa-stamp"></i> Official signature file: sign.png (embedded)</p>
+                </div>
+            </div>
+            
+            <div style="background:#fcf8e8; padding:16px 20px; border-radius:20px; margin-top: 15px;">
+                <p><i class="fas fa-gavel"></i> <strong>Legal acknowledgment:</strong> By signing below, Covered Entity (Rukhsar Mahmood) agrees to full development responsibility as per proposal, and Business Associate (Digicells International) confirms SEO + 6 months support + communication management. Client HamariBooking.com accepts budget breakdown and data security terms. Direct contact restriction is legally upheld.</p>
+            </div>
+
+            <div style="display: flex; justify-content: center; margin: 35px 0 15px;">
+                <button class="submit-contract" id="finalizeContractBtn"><i class="fas fa-check-circle"></i> Execute Agreement & Generate Summary</button>
+            </div>
+            <div id="contractSuccessMsg" style="text-align:center; font-weight:500; margin-top:10px; color:#2b6e4f;"></div>
+        </div>
+
+        <div class="footer-note">
+            <i class="far fa-copyright"></i> Digicells International — HamariBooking.com Contract v1.0 | For any disputes, governing law: Pakistan. This document serves as digital intent; final signatures binding.
+        </div>
+    </div>
+</div>
+
+<script>
+    // Canvas signature logic (for developer)
+    function initCanvas(canvasId) {
+        const canvas = document.getElementById(canvasId);
+        if (!canvas) return null;
+        const ctx = canvas.getContext('2d');
+        let drawing = false;
+        let lastX = 0, lastY = 0;
+
+        function getCoords(e) {
+            const rect = canvas.getBoundingClientRect();
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+            let clientX, clientY;
+            if (e.touches) {
+                clientX = e.touches[0].clientX;
+                clientY = e.touches[0].clientY;
+            } else {
+                clientX = e.clientX;
+                clientY = e.clientY;
+            }
+            let x = (clientX - rect.left) * scaleX;
+            let y = (clientY - rect.top) * scaleY;
+            x = Math.min(Math.max(0, x), canvas.width);
+            y = Math.min(Math.max(0, y), canvas.height);
+            return { x, y };
+        }
+
+        function startDraw(e) {
+            drawing = true;
+            const { x, y } = getCoords(e);
+            lastX = x; lastY = y;
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            ctx.lineTo(x, y);
+            ctx.stroke();
+            e.preventDefault();
+        }
+
+        function draw(e) {
+            if (!drawing) return;
+            const { x, y } = getCoords(e);
+            ctx.beginPath();
+            ctx.moveTo(lastX, lastY);
+            ctx.lineTo(x, y);
+            ctx.strokeStyle = '#1e2a3e';
+            ctx.lineWidth = 2;
+            ctx.lineCap = 'round';
+            ctx.stroke();
+            lastX = x;
+            lastY = y;
+            e.preventDefault();
+        }
+
+        function endDraw() { drawing = false; }
+        canvas.addEventListener('mousedown', startDraw);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', endDraw);
+        canvas.addEventListener('touchstart', startDraw);
+        canvas.addEventListener('touchmove', draw);
+        canvas.addEventListener('touchend', endDraw);
+        ctx.fillStyle = '#FFFFFF';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.strokeStyle = '#1E2A3E';
+        ctx.lineWidth = 2;
+        return canvas;
+    }
+
+    window.clearCanvas = function(canvasId) {
+        const canvas = document.getElementById(canvasId);
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#FFFFFF';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.strokeStyle = '#1E2A3E';
+    };
+
+    window.uploadSignatureImage = function(event, canvasId) {
+        const file = event.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function(loadEvent) {
+            const img = new Image();
+            img.onload = function() {
+                const canvas = document.getElementById(canvasId);
+                const ctx = canvas.getContext('2d');
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#FFFFFF';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                const ratio = Math.min(canvas.width / img.width, canvas.height / img.height);
+                const width = img.width * ratio;
+                const height = img.height * ratio;
+                const x = (canvas.width - width) / 2;
+                const y = (canvas.height - height) / 2;
+                ctx.drawImage(img, x, y, width, height);
+            };
+            img.src = loadEvent.target.result;
+        };
+        reader.readAsDataURL(file);
+    };
+
+    // CNIC preview handlers
+    function setupFilePreview(inputId, previewId) {
+        const input = document.getElementById(inputId);
+        const previewDiv = document.getElementById(previewId);
+        if(input) {
+            input.addEventListener('change', function(e) {
+                if(e.target.files.length) {
+                    previewDiv.innerText = e.target.files[0].name;
+                } else previewDiv.innerText = "No file chosen";
+            });
+            document.querySelector(`label[for="${inputId}"]`)?.addEventListener('click', () => input.click());
+        }
+    }
+    setupFilePreview('cnicFront', 'frontPreview');
+    setupFilePreview('cnicBack', 'backPreview');
+
+    // initialize developer canvas
+    const devCanvas = initCanvas('devSigCanvas');
+    if(devCanvas) {
+        const ctx = devCanvas.getContext('2d');
+        ctx.fillStyle = '#fff';
+        ctx.fillRect(0, 0, devCanvas.width, devCanvas.height);
+    }
+
+    // finalize / show agreement summary
+    document.getElementById('finalizeContractBtn')?.addEventListener('click', function() {
+        const devName = document.getElementById('devPrintName')?.value || "Rukhsar Mahmood";
+        const ceoName = document.getElementById('ceoPrintName')?.value || "Sardar Ali";
+        const devDate = document.getElementById('devSigDate')?.value || new Date().toISOString().slice(0,10);
+        const ceoDate = document.getElementById('ceoSigDate')?.value || devDate;
+        const frontFile = document.getElementById('cnicFront')?.files[0]?.name || "Not Provided";
+        const backFile = document.getElementById('cnicBack')?.files[0]?.name || "Not Provided";
+        let devSignatureStatus = "Signature drawn/uploaded";
+        const canvasCheck = document.getElementById('devSigCanvas');
+        if (canvasCheck) {
+            const isEmpty = !canvasCheck.toDataURL().includes('AA') && canvasCheck.toDataURL().length < 3000;
+            if(isEmpty) devSignatureStatus = "⚠️ No signature provided";
+            else devSignatureStatus = "✓ Signature recorded";
+        }
+        alert(`✅ CONTRACT EXECUTION SUMMARY\n\nCovered Entity (Developer): ${devName}\nSignature: ${devSignatureStatus}\nDate: ${devDate}\nCNIC Front: ${frontFile} | Back: ${backFile}\n\nBusiness Associate: Digicells International (CEO ${ceoName})\nDate: ${ceoDate}\n\nBy confirming, you agree to all clauses: dev responsibility, communication restrictions, 6 months support, liability & data security. This digital acknowledgment is legally binding.`);
+        document.getElementById('contractSuccessMsg').innerHTML = '<i class="fas fa-check-circle"></i> Agreement recorded (digital signature captured). Keep a screenshot for reference.';
+    });
+
+    // ensure Digicells signature image (sign.png) attempt; we keep fallback as placeholder
+    const ceoImg = document.getElementById('ceoSigImg');
+    if(ceoImg) {
+        ceoImg.onerror = function() {
+            this.style.display = 'none';
+            const fallbackDiv = document.getElementById('ceoSigFallback');
+            if(fallbackDiv) fallbackDiv.style.display = 'flex';
+        };
+        if(ceoImg.complete && ceoImg.naturalWidth === 0) ceoImg.onerror();
+    }
+</script>
+</body>
+</html>
